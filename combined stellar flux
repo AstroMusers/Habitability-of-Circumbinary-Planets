@@ -13,5 +13,5 @@ t = 1
 R = 3
 r = 9
 S = ((2*np.pi*h*c**2)/(l)**5)*((1)/(e**(h*c/l*k*t)-1))*((R)/(r))
-np.trapz(y=(h,c,e,k,t,R,r), x=l,dx=2)
+np.trapz(y=(h,c,e,k,t,R,r), x=l)
 print(S)

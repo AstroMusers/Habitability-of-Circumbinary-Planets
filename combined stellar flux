@@ -1,5 +1,8 @@
+equation for combined stellar flux from one location:
 $ S_1 = (\frac{2 \pi hc^2}{\lambda^5})(\frac{1}{e^{hc/\lambda kT_{eff, 1}}-1})(\frac{R_1}{r_1}) $
 
+
+all values below are place holders
 
 h = 4
 c = 5
@@ -10,5 +13,5 @@ t = 1
 R = 3
 r = 9
 S = ((2*np.pi*h*c**2)/(l)**5)*((1)/(e**(h*c/l*k*t)-1))*((R)/(r))
-np.trapz(l,x=None,dx=1.0,axis=-1)
+np.trapz(y=(h,c,e,k,t,R,r), x=l,dx=2)
 print(S)

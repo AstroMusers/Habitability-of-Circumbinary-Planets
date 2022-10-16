@@ -13,5 +13,5 @@ t = 1
 R = np.arange(3,5)
 r = np.arange(9,11)
 S = ((2*np.pi*h*c**2)/l*l*l*l*l)*((1)/(e**(h*c/l*k*t)-1))*((R)/(r))
-np.trapz(y= np.array([h,c,e,k,t,R,r], np.dtype==(int)), x = np.array([2,3,4], np.dtype==(int)), axis= l)
+np.trapz(y= np.array([h,c,e,k,t,R,r], np.dtype==int), x = np.arange(2,4), axis= l)
 print(S)

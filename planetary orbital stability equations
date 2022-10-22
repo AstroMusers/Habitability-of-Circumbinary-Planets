@@ -1,0 +1,16 @@
+np.mu is mass ratio of the two stars 
+m_1 and m_2 are the massses of the stars 
+a_b is the binary seperation 
+a_c is the minimum allowed semimajor axis of the planet.
+
+
+all values below are place holders
+
+m_2 = 3
+m_1 = 2
+np.mu = (m_2)/(m_1+m_2)
+
+a_b = 3
+a_c = (1.60+4.12*np.mu-5.09*np.mu**2)*a_b
+
+print(a_c)

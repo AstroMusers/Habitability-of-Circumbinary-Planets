@@ -3,8 +3,7 @@ $ S_1 = (\frac{2 \pi hc^2}{\lambda^5})(\frac{1}{e^{hc/\lambda kT_{eff, 1}}-1})(\
 
 %kepler-16
 
-h = 6.62607015*10**(-34)
-c = 299792458
+hc = 1.98644586*10**(-25)
 e = 2.718281
 k = 1.380649*10**(-23)
 T = 4018.200
@@ -12,7 +11,7 @@ R = 0.7686060
 r = 0.7048
 
 
-l = np.linspace(1., 1500., 1000)
+l = np.linspace(1/1000000., 700/1000000., 1000)
 
 integrand = (2*np.pi*h*c**2/(l**5))*(1/(e**(h*c/l/k/T)-1))*(R/r)**2
 
@@ -22,16 +21,15 @@ integral = np.trapz(integrand, x=l)
 print(integral)
 print (np.amax(integrand))
 
-%code for plot of wavelength vs integrand
-
+% code for a plot of wavelength vs integrand
 
 import pylab
 from matplotlib import pyplot as plt 
-plt.xlabel("wavelength(nm)") 
+plt.xlabel("wavelength") 
 plt.ylabel("integrand") 
 plt.plot(l,integrand) 
 
-%code for finding wavelength value at the peak of the plot
+%code for finding wavelength value of max integrand
 
 x = np.where(integral == np.amax(integrand))
     

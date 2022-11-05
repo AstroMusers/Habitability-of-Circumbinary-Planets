@@ -3,6 +3,7 @@ $ S_1 = (\frac{2 \pi hc^2}{\lambda^5})(\frac{1}{e^{hc/\lambda kT_{eff, 1}}-1})(\
 
 %kepler-16
 
+
 hc = 1.98644586*10**(-25)
 e = 2.718281
 k = 1.380649*10**(-23)
@@ -11,9 +12,9 @@ R = 0.7686060
 r = 0.7048
 
 
-l = np.linspace(1/1000000., 700/1000000., 1000)
+l = np.linspace(1/1000000000., 4500/1000000000., 1000)
 
-integrand = (2*np.pi*h*c**2/(l**5))*(1/(e**(h*c/l/k/T)-1))*(R/r)**2
+integrand = (2*np.pi*hc**2/(l**5))*(1/(e**(hc/l/k/T)-1))*(R/r)**2
 
  
 integral = np.trapz(integrand, x=l)

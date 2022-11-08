@@ -30,7 +30,7 @@ plt.xlabel("wavelength")
 plt.ylabel("integrand") 
 plt.plot(l,integrand) 
 
-%code for finding wavelength value of max integrand
+% code for finding wavelength value of max integrand
 
 x = np.where(integral == np.amax(integrand))
     

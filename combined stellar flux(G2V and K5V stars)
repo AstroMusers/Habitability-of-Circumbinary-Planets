@@ -1,0 +1,55 @@
+% code for the stellar flux of a G2V star(T1 and S1)"
+
+hc = 1.98644586*10**(-25)
+e = 2.718281
+k = 1.380649*10**(-23)
+T1 = 5800
+
+
+l = np.linspace(1/1000000000., 4500/1000000000., 1000)
+
+S1 = (2*np.pi*hc**2/(l**5))*(1/(e**(hc/l/k/T1)-1))
+
+ 
+integral = np.trapz(S1, x=l)
+
+print(integral)
+
+% code for the stellar flux of a K5V star(T2 and S2)"
+
+hc = 1.98644586*10**(-25)
+e = 2.718281
+k = 1.380649*10**(-23)
+T2 = 4400
+
+l = np.linspace(1/1000000000., 4500/1000000000., 1000)
+
+S2 = (2*np.pi*hc**2/(l**5))*(1/(e**(hc/l/k/T2)-1))
+
+ 
+integral = np.trapz(S2, x=l)
+
+print(integral)
+
+
+% code for a plot of wavelength vs stellar flux(S1 and S2)
+
+import pylab
+from matplotlib import pyplot as plt 
+import scipy.interpolate
+
+plt.xlabel("wavelength(nm)") 
+plt.ylabel("stellar flux")
+plt.plot(l,S1, color='red')
+plt.plot(l,S2, color='blue') 
+
+% plot of combined flux from both planets(S1+S2)
+plt.plot(l,S1+S2, color='purple') 
+
+% finding the max y value on the plot of combined flux from both planets(S1+S2)
+max(S1+S2)
+print(max(S1+S2))
+
+% finding the y value (wavelength)that corresponds to the max y value(combined flux from both planets)
+x_val = np.interp(max(S1+S2), l, S1+S2)
+print(x_val)

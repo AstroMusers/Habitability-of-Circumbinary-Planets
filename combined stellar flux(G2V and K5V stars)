@@ -38,8 +38,8 @@ import pylab
 from matplotlib import pyplot as plt 
 import scipy.interpolate
 
-plt.xlabel("wavelength(nm)") 
-plt.ylabel("stellar flux")
+plt.xlabel("wavelength($\mu$m)") 
+plt.ylabel("stellar flux(W$m^8$)")
 plt.plot(l,S1, color='red')
 plt.plot(l,S2, color='blue') 
 

@@ -50,3 +50,6 @@ print(max(S1+S2))
 
 np.argmax(S1+S2)
 print(np.argmax(S1+S2))
+
+
+%output of print(np.argmax(S1+S2)) is 264
